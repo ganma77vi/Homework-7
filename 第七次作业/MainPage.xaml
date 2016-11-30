@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="第七次作业.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:第七次作业"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+        <Image Stretch="Fill" Source="Assets/b.jpg"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="400">
+            <TextBlock Height="200"/>
+            <TextBlock Height="100" Text="Hello,Microsoft" FontSize="48" FontWeight="Bold" FontFamily="Segoe Script" />
+            <TextBox PlaceholderText="Enter your Account" BorderBrush="#FF0F0202" Opacity="0.7"/>
+            <TextBlock Height="30"/>
+            <PasswordBox Name="PasswordBox"  PlaceholderText="Enter your password"
+                         PasswordRevealMode="Hidden" PasswordChar="@" 
+                         BorderBrush="#FF0F0202" Opacity="0.7" />
+            <Grid>
+                <CheckBox Name="PasswordCheckBox" Content="显示密码"
+                      IsChecked="False" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"
+                      Opacity="0.7" />
+                <HyperlinkButton Content="忘记密码" HorizontalAlignment="Right" Click="HyperlinkButton_Click" >
+                    <FlyoutBase.AttachedFlyout>
+                        <Flyout Placement="Right">
+                            <TextBlock TextWrapping="Wrap" Text="忘记密码了?哈哈哈哈哈哈哈"/>
+                        </Flyout>
+                    </FlyoutBase.AttachedFlyout>
+                </HyperlinkButton>
+            </Grid>
+            <TextBlock Height="15"/>
+            <Button Name="Botton1" Content="登录" HorizontalAlignment="Center" 
+                    BorderBrush="#FF1D337C" Opacity="0.7" Width="120" Height="35" >
+                <Button.Flyout>
+                    <Flyout Placement="Left">
+                        <TextBlock Text="登录不了ho"/>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+            <TextBlock Height="15"/>
+            <Button Name="Botton2" Content="注册" HorizontalAlignment="Center" 
+                    BorderBrush="#FF1D337C" Opacity="0.7" Width="120" Height="35">
+                <Button.Flyout>
+                    <Flyout Placement="Bottom">
+                        <TextBlock Text="注册不了耶"/>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
